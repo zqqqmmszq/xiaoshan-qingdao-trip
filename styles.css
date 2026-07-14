@@ -85,7 +85,38 @@
   @media (max-width:620px){
     html{scroll-padding-top:10px}.section-shell,.day-section{width:min(calc(100% - 28px),var(--content));padding:58px 0}.section-heading{display:block;margin-bottom:25px}.section-heading h2{font-size:2.4rem}.section-intro{margin-top:12px}.heading-note{text-align:left;margin-top:12px}.hero{padding-top:22px}.hero-topline{align-items:flex-start;gap:10px}.data-pill{font-size:.65rem}.hero-grid{gap:32px}.hero h1{font-size:clamp(3.8rem,21vw,6.4rem)}.hero-lead{font-size:.9rem;margin:20px 0}.hero-meta{display:grid;gap:5px}.hero-actions{align-items:stretch;flex-direction:column}.hero-actions .button{width:100%}.hero-visual{width:100%}.countdown-card{left:3px;bottom:15px;padding:13px 15px}.countdown-card strong{font-size:1.35rem}.route-stamp{right:0;top:28px}.fact-grid{grid-template-columns:1fr 1fr;gap:2px}.fact-card{padding:14px 10px}.now-panel{grid-template-columns:1fr;padding:25px}.now-panel .button{width:100%}.weather-alert{grid-template-columns:1fr;gap:7px}.weather-grid{grid-template-columns:1fr}.weather-card{min-height:auto}.climate-notes{grid-template-columns:1fr}.decision-card{grid-template-columns:1fr;padding:22px}.decision-badge{width:52px;height:52px}.decision-metrics{display:grid;grid-template-columns:1fr}.decision-metrics span{border-left:0;border-top:1px solid var(--line);padding:9px 0 0}.transport-grid{grid-template-columns:1fr}.train-row{grid-template-columns:58px 1fr}.train-price{grid-column:2;text-align:left}.local-steps{grid-template-columns:1fr}.switch-rule{display:block}.switch-rule p{margin-top:7px}.area-strip{margin-inline:-14px;padding-inline:14px}.hotel-card{padding:21px}.hotel-head{grid-template-columns:1fr}.hotel-price{text-align:left}.hotel-stats{grid-template-columns:1fr}.pros-cons{grid-template-columns:1fr}.hotel-actions{align-items:flex-start;flex-direction:column}.itinerary-intro{padding-bottom:20px}.mode-switcher{width:100%;border-radius:14px}.overview-timeline{grid-template-columns:72px repeat(6,105px);overflow:auto}.day-section{padding-top:50px}.day-hero{grid-template-columns:64px 1fr;gap:15px}.day-index{font-size:3.7rem}.day-title h2{font-size:2.2rem}.day-cost{grid-template-columns:1fr}.mode-advice{grid-template-columns:1fr;gap:6px}.day-meta-grid{grid-template-columns:1fr 1fr}.event-list::before{left:8px}.event-card{grid-template-columns:18px 1fr;gap:8px}.event-time{grid-column:2;text-align:left;padding:0 0 0 5px;display:flex;gap:6px;align-items:baseline}.event-dot{grid-row:1/3;margin:11px auto 0;width:11px;height:11px;border-width:3px}.event-content{grid-column:2;padding:18px}.event-title-line h3{font-size:1.23rem}.event-details{grid-template-columns:1fr 1fr}.event-transport,.event-fallbacks{grid-template-columns:1fr}.food-grid{grid-template-columns:1fr}.seafood-guide{grid-template-columns:1fr;padding:24px}.budget-presets{overflow:auto;padding-bottom:4px}.preset-button{white-space:nowrap}.budget-form{grid-template-columns:1fr 1fr;padding:18px}.toggle-row{display:grid}.budget-result>strong{font-size:2.8rem}.checklist-grid{grid-template-columns:1fr}.risk-banner{grid-template-columns:1fr}.risk-banner span{white-space:normal}.risk-grid{grid-template-columns:1fr}.source-item{grid-template-columns:auto 1fr}.source-item>.status{grid-column:2}.final-audit{display:block}.final-audit p{margin:9px 0 16px}.mobile-nav a:nth-child(4){display:none}.mobile-nav{grid-template-columns:repeat(4,1fr)}.back-top{right:15px}.mini-link{min-height:42px}.chart-wrap{margin-inline:-10px}.price-disclaimer{font-size:.7rem}
   }
-  @media (max-width:390px){.event-details,.budget-form,.day-meta-grid{grid-template-columns:1fr}.fact-grid{grid-template-columns:1fr}.mobile-nav{left:6px;right:6px}.mobile-nav a{font-size:.6rem}.hero h1{font-size:3.65rem}}
+  /* 竖屏手机：单列优先、增大触控区域，并避免卡片/表单挤压。 */
+  @media (max-width:480px) and (orientation:portrait){
+    body{font-size:15px;padding-bottom:env(safe-area-inset-bottom)}
+    .section-shell,.day-section{width:calc(100% - 24px);padding:48px 0}
+    .section-shell.compact{padding-top:8px;padding-bottom:32px}
+    .hero{padding-top:16px}.hero-topline{display:grid;gap:8px}.hero-grid{gap:24px}
+    .hero h1{font-size:clamp(3.2rem,18vw,4.25rem);letter-spacing:-.07em}
+    .hero-lead{font-size:.94rem;line-height:1.75}.hero-meta{font-size:.75rem}
+    .hero-visual{max-width:360px}.hero-visual svg{width:100%;height:auto}
+    .countdown-card{left:0;bottom:8px;padding:11px 13px}.route-stamp{top:20px;padding:7px 10px}
+    .fact-grid,.weather-grid,.climate-notes,.day-meta-grid,.event-details,.budget-form{grid-template-columns:1fr}
+    .fact-grid{gap:8px;margin-top:28px}.fact-card{padding:16px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+    .section-heading h2{font-size:2.05rem}.section-intro{font-size:.88rem}
+    .weather-card,.hotel-card,.event-content,.decision-card,.comfort-panel,.budget-result,.check-group,.risk-card{border-radius:20px}
+    .weather-card,.hotel-card,.event-content,.comfort-panel{padding:18px}
+    .weather-card .weather-slots{grid-template-columns:1fr}.weather-card .weather-slots span{text-align:left;padding:10px 12px}
+    .decision-card{padding:18px}.decision-card h3{font-size:1.38rem}.decision-metrics span{padding-top:12px}
+    .table-shell{margin-inline:-12px;border-radius:16px}.compare-table{min-width:760px}.compare-table th,.compare-table td{padding:13px 12px}
+    .day-hero{grid-template-columns:50px minmax(0,1fr);gap:12px}.day-index{font-size:3.05rem}.day-title h2{font-size:1.9rem}
+    .day-cost{grid-template-columns:1fr}.event-card{grid-template-columns:14px minmax(0,1fr);gap:6px}.event-list::before{left:6px}.event-dot{width:10px;height:10px}
+    .event-time,.event-content{grid-column:2}.event-time{padding-left:3px}.event-content{padding:16px}
+    .mode-switcher{display:grid;grid-template-columns:1fr}.mode-button{min-height:44px}
+    .budget-presets{display:flex;margin-inline:-12px;padding-inline:12px}.budget-form{padding:16px}.budget-result>strong{font-size:2.45rem}
+    .source-item{grid-template-columns:1fr}.source-item>.status{grid-column:1}.source-cat{width:max-content;min-width:42px}
+    .button,.mini-link,.text-button,.icon-button{min-height:44px}
+    .mobile-nav{left:6px;right:6px;bottom:max(6px,env(safe-area-inset-bottom));grid-template-columns:repeat(4,1fr);border-radius:16px}
+    .mobile-nav a{min-height:48px;font-size:.64rem}.mobile-nav a:nth-child(4){display:none}
+    .back-top{right:12px;bottom:80px;width:44px;height:44px}footer{width:calc(100% - 24px);padding-bottom:110px}
+  }
+  @media (max-width:359px) and (orientation:portrait){
+    .hero h1{font-size:3rem}.section-heading h2{font-size:1.85rem}.mobile-nav a{font-size:.58rem}.day-hero{grid-template-columns:44px minmax(0,1fr)}
+  }
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.button:hover{transform:none}}
 }
 
