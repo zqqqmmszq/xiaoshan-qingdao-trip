@@ -103,6 +103,7 @@
     .weather-card .weather-slots{grid-template-columns:1fr}.weather-card .weather-slots span{text-align:left;padding:10px 12px}
     .decision-card{padding:18px}.decision-card h3{font-size:1.38rem}.decision-metrics span{padding-top:12px}
     .table-shell{margin-inline:-12px;border-radius:16px}.compare-table{min-width:760px}.compare-table th,.compare-table td{padding:13px 12px}
+    .area-strip{margin-inline:0;padding-inline:0;width:100%}
     .day-hero{grid-template-columns:50px minmax(0,1fr);gap:12px}.day-index{font-size:3.05rem}.day-title h2{font-size:1.9rem}
     .day-cost{grid-template-columns:1fr}.event-card{grid-template-columns:14px minmax(0,1fr);gap:6px}.event-list::before{left:6px}.event-dot{width:10px;height:10px}
     .event-time,.event-content{grid-column:2}.event-time{padding-left:3px}.event-content{padding:16px}
